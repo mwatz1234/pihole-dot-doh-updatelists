@@ -21,3 +21,18 @@ echo 's6-echo "Stopping stubby"' >> /etc/services.d/pihole-dot-doh/finish
 echo 'killall -9 stubby' >> /etc/services.d/pihole-dot-doh/finish
 echo 's6-echo "Stopping cloudflared"' >> /etc/services.d/pihole-dot-doh/finish
 echo 'killall -9 cloudflared' >> /etc/services.d/pihole-dot-doh/finish
+
+# install wget package
+apt-get -y update \
+    && apt-get -y install wget
+
+# install updatelists
+wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | bash
+
+#Remove pihole's update Gravity
+sed -e '/pihole updateGravity/ s/^#*/#/' -i /etc/cron.d/pihole
+
+# clean up
+apt-get -y autoremove \
+    && apt-get -y autoclean \
+    && apt-get -y clean
