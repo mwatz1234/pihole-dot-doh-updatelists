@@ -35,4 +35,5 @@ sed -e '/pihole updateGravity/ s/^#*/#/' -i /etc/cron.d/pihole
 # clean up
 apt-get -y autoremove \
     && apt-get -y autoclean \
-    && apt-get -y clean
+    && apt-get -y clean \
+    && rm -fr /tmp/* /var/tmp/* /var/lib/apt/lists/*
