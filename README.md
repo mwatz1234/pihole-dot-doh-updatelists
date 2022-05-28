@@ -1,4 +1,4 @@
-# pihole-dot-doh
+# pihole-dot-doh-updatelists
 Official pihole docker with both DoT (DNS over TLS) and DoH (DNS over HTTPS) clients and jacklul/pihole-updatelists. Don't browse the web securely and yet still send your DNS queries in plain text!
 
 Multi-arch image built for both Raspberry Pi (arm64, arm32/v7) and amd64.
