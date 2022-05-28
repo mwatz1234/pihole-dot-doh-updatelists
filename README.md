@@ -1,5 +1,5 @@
 # pihole-dot-doh
-Official pihole docker with both DoT (DNS over TLS) and DoH (DNS over HTTPS) clients. Don't browse the web securely and yet still send your DNS queries in plain text!
+Official pihole docker with both DoT (DNS over TLS) and DoH (DNS over HTTPS) clients and jacklul/pihole-updatelists. Don't browse the web securely and yet still send your DNS queries in plain text!
 
 Multi-arch image built for both Raspberry Pi (arm64, arm32/v7) and amd64.
 
@@ -43,7 +43,3 @@ For docker parameters, refer to [official pihole docker readme](https://github.c
   * Pihole base image is the official [pihole/pihole:latest](https://hub.docker.com/r/pihole/pihole/tags?page=1&name=latest)
   * Cloudflared client was obtained from [official site](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation#linux)
   * Stubby is a standard debian package
-* I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;)
-* If you like my work, [a donation to my burger fund](https://paypal.me/mersenne) is very much appreciated.
-
-[![Donate](https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/donate-button-small.png)](https://paypal.me/mersenne). 
