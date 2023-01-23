@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Docker Image Update Checker
         id: check
-        uses: lucacome/docker-image-update-checker@v1
+        uses: lucacome/docker-image-update-checker@v1.1.1
         with:
           base-image: pihole/pihole:latest
           image: mwatz/pihole-dot-doh-updatelists:latest
