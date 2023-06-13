@@ -41,6 +41,7 @@ services:
       - './etc/updatelists:/etc/pihole-updatelists/:rw'
     restart: unless-stopped
 ```
+
 ### Notes:
 * Remember to set pihole env DNS1 and DNS2 to use the DoH / DoT IP below. If either DNS1 or DNS2 is NOT set, Pihole will use a non-encrypted service.
   * DoH service (cloudflared) runs at 127.1.1.1#5153. Uses cloudflare (1.1.1.1 / 1.0.0.1) by default
