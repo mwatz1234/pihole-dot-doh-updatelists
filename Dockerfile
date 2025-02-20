@@ -8,8 +8,8 @@ ARG TARGETPLATFORM
 
 ADD stuff /temp
 
-RUN apt-get update && \
-    apt-get install -Vy sudo bash nano curl wget php-cli php-sqlite3 php-intl php-curl stubby && \
+RUN apk update && \
+    apk add -Vy sudo bash nano curl wget php-cli php-sqlite3 php-intl php-curl stubby && \
     /bin/bash /temp/install.sh && \
     rm -f /temp/install.sh && \
     wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | bash /dev/stdin docker && \
