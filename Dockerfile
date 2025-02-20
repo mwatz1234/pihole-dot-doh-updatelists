@@ -1,3 +1,6 @@
+ARG FRM='pihole/pihole:latest'
+ARG TAG='latest'
+
 FROM ${FRM}
 ARG FRM
 ARG TAG
