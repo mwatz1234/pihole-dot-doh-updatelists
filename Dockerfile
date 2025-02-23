@@ -1,9 +1,15 @@
-FROM pihole/pihole:latest
+ARG FRM='pihole/pihole:latest'
+ARG TAG='latest'
 
-RUN apt-get update
-RUN apt-get install -Vy sudo bash curl wget
-RUN apt-get install -Vy php-cli php-sqlite3 
-RUN apt-get install -Vy php-intl php-curl stubby
+FROM ${FRM}
+ARG FRM
+ARG TAG
+ARG TARGETPLATFORM
+
+RUN apk upgrade --no-cache
+
+RUN apt-get update && \
+    apt-get install -Vy sudo bash nano curl wget php-cli php-sqlite3 php-intl php-curl stubby
 
 ADD stuff /temp
 
