@@ -1,0 +1,34 @@
+# ============================================================
+# Runtime-generated volume data — never commit these
+# ============================================================
+
+# Pi-hole data (gravity DB, FTL DB, TLS certs, list cache, etc.)
+testing/etc-pihole/
+
+# Backup created by Test-DotDoh.ps1 during auto config swap
+testing/config/dnsproxy.yml.bak
+
+# ============================================================
+# Authored test configs — keep these (committed)
+# ============================================================
+# testing/config/dnsproxy.yml              — default testing config
+# testing/config/dnsproxy-doh-only.yml    — DoH-only isolated test
+# testing/config/dnsproxy-dot-only.yml    — DoT-only isolated test (home network)
+# testing/docker-compose.yml
+# examples/                               — all reference compose files
+
+# ============================================================
+# General
+# ============================================================
+.DS_Store
+*.log
+*.bak
+
+# Local dev guide — not for the public repo
+GIT-SETUP.md
+
+# Personal git setup notes — local only, not for public repo
+GIT-SETUP.md
+
+# Local testing infrastructure — not needed by end users
+testing/
